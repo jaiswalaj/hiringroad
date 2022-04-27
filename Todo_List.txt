@@ -1,0 +1,2 @@
+Header of all pages not showing categories from DB. Data needs to be sent in all views.
+

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="row m-0">
+      {% for category in categories %}
+
+        <div class="card m-1" style="width: 18rem;">
+          <img src="/media/{{category.image}}" alt="" class="img-fluid p-1" style="width:100%; height:100%; object-fit:cover;">
+          <h4 class="card-title text-center" style="">{{category.title}}</h4>
+          <a href="/job/categories/{{category.url}}" class="link-primary">Read More</a>
+        </div>
+      
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock content %}

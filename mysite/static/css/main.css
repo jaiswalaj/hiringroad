@@ -1,0 +1,44 @@
+body {
+  background-color: #ffffff !important;
+}
+
+.stickyHeader {
+  top: 0;
+  padding: 5px;
+  margin: 0;
+  position: fixed;
+  z-index: 99;
+  background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity)) !important;
+}
+
+.mainContent {
+  margin: 70px 0 0 0;
+  width: 100%
+  padding: 0;
+}
+
+.customFooter {
+  margin-top: 70px;
+}
+
+.cardCustomImage {
+  max-height: 100px !important;
+  max-width: 100px !important;
+  min-height: 100px !important;
+  min-width: 100px !important;
+
+}
+
+.customCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.postCard:hover {
+  cursor: pointer;
+}
+
+.testCustom {
+  background-color: red;
+}
