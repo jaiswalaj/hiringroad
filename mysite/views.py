@@ -31,10 +31,12 @@ def jobcategories(request):
     categories = Category.objects.all()
     return render(request, 'jobcategories.html', {'categories' : categories})
 
+def jobcategorypost(request, url):
+    category = Category.objects.get(url=url)
+    posts = Post.objects.filter(cat=category)
+    return render(request, 'jobposts.html', {'category' : category, 'posts' : posts})
+
+
 # def post(request, url):
 #     post = Post.objects.get(url=url)
 #     return render(request, 'posts.html', {'post' : post})
-
-# def category(request, url):
-#     categories = Category.objects.get(url=url)
-#     return render(request, 'category.html', {'categories' : categories})
