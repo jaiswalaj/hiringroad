@@ -36,7 +36,6 @@ def jobcategorypost(request, url):
     posts = Post.objects.filter(cat=category)
     return render(request, 'jobposts.html', {'category' : category, 'posts' : posts})
 
-
-# def post(request, url):
-#     post = Post.objects.get(url=url)
-#     return render(request, 'posts.html', {'post' : post})
+def singlejobpost(request, url):
+    post = Post.objects.get(url=url)
+    return render(request, 'singlejobpost.html', {'post' : post})

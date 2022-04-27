@@ -29,6 +29,6 @@ urlpatterns = [
     # Job Posts related URLs
     path('job/categories', views.jobcategories, name='job-categories'),
     path('job/categories/<slug:url>', views.jobcategorypost, name='job-category-post'),
-    # path('blog/<slug:url>', views.post),
+    path('job/categories/post/<slug:url>', views.singlejobpost, name='single-job-post'),
     # path('category/<slug:url>', views.category),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
