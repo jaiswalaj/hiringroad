@@ -27,7 +27,7 @@ urlpatterns = [
     path('contact-us/', views.contactus, name='contact-us'),
     path('testpage/', views.testpage, name='testpage'),
     # Job Posts related URLs
-    path('job/categories', views.jobcategories),
+    path('job/categories', views.jobcategories, name='job-categories'),
     # path('blog/<slug:url>', views.post),
     # path('category/<slug:url>', views.category),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
