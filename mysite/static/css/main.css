@@ -21,6 +21,11 @@ body {
   margin-top: 70px;
 }
 
+.featuredCustomCard {
+  height: 100%;
+  background-color: #1111;
+}
+
 .cardCustomImage {
   max-height: 100px !important;
   max-width: 100px !important;

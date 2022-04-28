@@ -12,7 +12,8 @@ def testpage(request):
 
 def index(request):
     # Load posts from DB
-    posts = Post.objects.all()[:11]
+    # posts = Post.objects.all()[:11]
+    posts = Post.objects.filter().order_by('add_date').reverse()[:10]
     categories = Category.objects.all()
   
     data = {
