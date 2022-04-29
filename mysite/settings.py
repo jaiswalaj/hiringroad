@@ -72,6 +72,7 @@ TEMPLATES = [
 # Cutom added by Ayush
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-jaiswalaj-hiringroad-vxbmac8kzt4.ws-us42.gitpod.io',
+    'https://8000-jaiswalaj-hiringroad-vxbmac8kzt4.ws-us43.gitpod.io',
 ]
 
 
