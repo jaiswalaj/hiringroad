@@ -4,13 +4,11 @@
     <img src="/media/{{post.image}}" alt="" class="cardCustomImage card-img mx-1">
     <div class="row m-0 p-0">
         <h6 class="card-title">{{post.title | safe}}</h6>
-        <p class="card-text m-0">
-            {{post.content | truncatewords:30 | safe}}
-        <div></div>
-        <a href="/job/categories/post/{{post.url}}" class="link-primary">Read More</a>
-        </p>
-
-        <footer class="blockquote-footer m-0 p-0">Posted On : {{post.add_date | date:"d-m-y" | safe}}</footer>
+        <p class="text-secondary mb-1">{{post.cat.title | safe}}</p>
+        <a href="#" class="link-primary">#{{post.trending_tags | safe}}</a>
+        <p class="text primary">{{post.job_location | safe}}</p>
+        <footer class="blockquote-footer m-0 p-0">Posted {{ post.add_date | timesince | safe}} ago</footer>
+        <a href="/job/categories/post/{{post.url}}" class="link-primary" style="display: none;">Read More</a>
     </div>
 </div>
 

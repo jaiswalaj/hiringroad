@@ -29,6 +29,7 @@ class Post(models.Model):
       apply_here_url = models.CharField(max_length=500)
       job_location = models.CharField(max_length=100)
       designation = models.CharField(max_length=100)
+      trending_tags = models.CharField(max_length=100)
       add_date = models.DateTimeField(auto_now_add=True, null=True)
 
       def __str__(self):

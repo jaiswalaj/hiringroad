@@ -4,7 +4,7 @@
     <ol class="list-unstyled mb-0">
         {% for category in categories %}
 
-        <li><a href="#" class="link-secondary">{{ category.title | safe }}</a></li>
+        <li><a href="/job/categories/{{category.url}}" class="link-secondary">{{ category.title | safe }}</a></li>
 
         {% endfor %}
     </ol>
