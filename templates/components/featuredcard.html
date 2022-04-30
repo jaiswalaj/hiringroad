@@ -1,0 +1,23 @@
+<!--   Featured Post Start -->
+<div class="row my-2">
+    <h3>Featured Posts</h3>
+
+    {% for post in posts %}
+    {% if forloop.counter <= 2 %} <div class="col-md-6">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250 featuredCustomCard">
+            <div class="card-body d-flex flex-column align-items-start">
+                <strong class="d-inline-block mb-2 text-primary">{{post.cat.title | safe}}</strong>
+                <h3 class="mb-0">
+                    <a class="text-dark" href="#">{{post.title | safe}}</a>
+                </h3>
+                <div class="mb-1 text-muted">{{post.add_date | date:"d-m-y" | safe}}</div>
+                <p class="card-text mb-auto">{{post.content | truncatewords:20 | safe}}</a>
+            </div>
+            <img class="card-img-right flex-auto d-none d-md-block" alt="Thumbnail [200x250]"
+                style="width: 200px; height: 250px;" src="/media/{{post.image}}" data-holder-rendered="true">
+        </div>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+<!--   Featured Post End -->
