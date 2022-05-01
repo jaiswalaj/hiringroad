@@ -1,7 +1,43 @@
 {% include 'header.html' %}
 
-{% block content %}
 
-{% endblock content %}
+<!-- Container 1 Start -->
+<div class="container mb-0 pt-0">
+
+    {% comment "Uncomment when Google Ads are approved" %}
+    {% include 'components/ad1.html' %}
+    {% endcomment %}
+
+</div>
+<!-- Container 1 End -->
+
+
+<!-- Container 2 Start -->
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-md-8 blog-main mb-3">
+
+            {% block content %}
+
+            {% endblock content %}
+
+
+        </div>
+
+        <!-- Right Side Navigtion Start -->
+
+        {% include 'components/right_navigation_panel.html' %}
+
+        <!-- Right Side Navigtion End -->
+
+    </div>
+
+</main>
+<!-- Container 2 End -->
+
+{% comment "Uncomment when Google Ads are approved" %}
+{% include 'components/ad3.html' %}
+{% endcomment %}
+
 
 {% include 'footer.html' %}
