@@ -10,6 +10,9 @@
     <p class="card-subtitle mb-2 text-muted">Posted On : {{post.add_date| date:"d-M-Y" | safe}}</p>
     <img src="/media/{{post.image | safe}}" alt="" class="img-fluid">
     <p class="card-text">{{post.content | safe}}</p>
+    <div class="d-flex justify-content-center">
+    <a href="{{post.apply_here_url | safe}}" class="btn btn-secondary">Apply Now</a>
+  </div>
   </div>
 </div>
 
