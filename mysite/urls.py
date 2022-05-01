@@ -25,6 +25,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('about-us/', views.aboutus, name='about-us'),
     path('contact-us/', views.contactus, name='contact-us'),
+    path('privacy-policy/', views.privacypolicy, name='privacy-policy'),
     path('testpage/', views.testpage, name='testpage'),
     # Job Posts related URLs
     path('job/categories', views.jobcategories, name='job-categories'),

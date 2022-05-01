@@ -12,13 +12,9 @@ def testpage(request):
 
 def index(request):
     # Load posts from DB
-    # posts = Post.objects.all()[:11]
-    posts = Post.objects.filter().order_by('add_date').reverse()[:10]
-    categories = Category.objects.all()
-  
+    posts = Post.objects.filter().order_by('add_date').reverse()[:10]  
     data = {
-      'posts' : posts,
-      'categories' : categories
+      'posts' : posts
     }
     return render(request, 'index.html', data)
 
@@ -28,9 +24,11 @@ def aboutus(request):
 def contactus(request):
     return render(request, 'contactus.html')
 
+def privacypolicy(request):
+    return render(request, 'privacypolicy.html')
+
 def jobcategories(request):
-    categories = Category.objects.all()
-    return render(request, 'jobcategories.html', {'categories' : categories})
+    return render(request, 'jobcategories.html')
 
 def jobcategorypost(request, url):
     category = Category.objects.get(url=url)

@@ -43,7 +43,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             {% for category in categories %}
 
-                <li><a class="dropdown-item" href="/job/categories/{{category.url}}">{{category.title}}</a></li>
+                <li><a class="dropdown-item" href="/job/categories/{{category.url}}">{{category.title | safe}}</a></li>
 
             {% endfor %}
             <li><hr class="dropdown-divider"></li>
